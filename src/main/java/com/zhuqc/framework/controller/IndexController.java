@@ -1,5 +1,6 @@
 package com.zhuqc.framework.controller;
 
+import com.zhuqc.framework.common.ApiResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
 
     @GetMapping("/index")
-    public String index() {
-        return "Hello World";
+    public ApiResult<String> index() {
+        return ApiResult.success("Hello World");
     }
 }
