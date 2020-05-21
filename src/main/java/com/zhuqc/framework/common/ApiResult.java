@@ -58,6 +58,10 @@ public class ApiResult<T> implements Serializable {
         return apiResult;
     }
 
+    public static ApiResult fail(Throwable e) {
+        return fail(e.getMessage());
+    }
+
     public static ApiResult withCode(ResultCode resultCode) {
         return withCode(resultCode, null);
     }
