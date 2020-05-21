@@ -3,7 +3,9 @@
 ## 前言
 项目在运行时出现异常时，如若没有对异常进行捕获并处理，就会出现如下页面：
 
-![异常页面](../images/06/01.png)
+<div align="left">
+    <img src="https://user-gold-cdn.xitu.io/2020/5/21/17235de99348489d?w=708&h=237&f=png&s=18841" alt="异常页面"/>
+</div>
 
 这样显然对用户是及其不友好的。
 
@@ -63,7 +65,9 @@ BusinessException是约定的业务异常的基类，若是主动抛出一般都
 
 统一处理后，返回结果如下:
 
-![异常页面](../images/06/02.png)
+<div align="left">
+    <img src="https://user-gold-cdn.xitu.io/2020/5/21/17235dfebc175b57?w=446&h=75&f=png&s=4270" alt="异常页面"/>
+</div>
 
 ### 实现HandlerExceptionResolver接口
 ```java
@@ -89,7 +93,8 @@ public class GlobalHandlerExceptionResolver implements HandlerExceptionResolver 
 ```
 该方式需要实现HandlerExceptionResolver接口，然后将实现类注入到Spring容器中。
 
-但第一种方式中，@ResponseBody注解，Spring就帮我们返回了json格式数据，而这需要自己实现。
+但第一种方式中，通过@ResponseBody注解，Spring就帮我们返回了json格式数据，而这需要自己实现。
+
 这里实现了工具类WebUtils，用于返回json数据，如下：
 ```java
 public class WebUtils {
