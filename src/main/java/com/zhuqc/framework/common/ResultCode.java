@@ -13,14 +13,13 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ResultCode {
 
-    SUCCESS(200, "成功"),
+    SUCCESS(200, "success"),
 
-    FAIL(500, "失败"),
+    FAIL(500, "fail"),
 
     /* 参数错误：1000 - 1999 */
 
     /* 用户错误：2000 - 2999 */
-    USER_NOT_LOGIN(2001, "用户未登录"),
 
     /* 接口异常：3000 - 3999 */
     ;
