@@ -19,13 +19,16 @@ import java.util.Locale;
 @RestController
 @RequestMapping("/message")
 public class MessageController {
+
     @Autowired
     private MessageSource messageSource;
 
     @ApiOperation("成功")
     @GetMapping("/success")
     public ApiResult<String> success() {
+        // 获取当前语言
         Locale locale = LocaleContextHolder.getLocale();
+        // 根据Code值和语言，获取国际化数据
         String message = messageSource.getMessage(ResultCode.SUCCESS.getMessage(), null, locale);
         return new ApiResult<>(ResultCode.SUCCESS.getCode(), null, message);
     }

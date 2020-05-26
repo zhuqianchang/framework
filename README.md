@@ -8,7 +8,7 @@
 * [（五）从零搭建后端框架——统一基类、接口、返回对象设计](https://juejin.im/post/5ec4efed6fb9a047a3272e81)
 * [（六）从零搭建后端框架——异常统一处理的三种方式](https://juejin.im/post/5ec61c43f265da76fb0c348b)
 * [（七）从零搭建后端框架——优雅地进行参数校验](https://juejin.im/post/5ec772a3f265da770b40c00d)
-* [（八）从零搭建后端框架——听起来高大上的国际化](https://juejin.im/post/5ecb9d17f265da76e97d33e6)
+* [（八）从零搭建后端框架——听起来高大上的国际化](https://juejin.im/post/5ecc7492f265da76fe6cc832)
 
 ## 源码
 [https://github.com/zhuqianchang/framework](https://github.com/zhuqianchang/framework)
