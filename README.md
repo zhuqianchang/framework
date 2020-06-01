@@ -9,6 +9,7 @@
 * [（六）从零搭建后端框架——异常统一处理的三种方式](https://juejin.im/post/5ec61c43f265da76fb0c348b)
 * [（七）从零搭建后端框架——优雅地进行参数校验](https://juejin.im/post/5ec772a3f265da770b40c00d)
 * [（八）从零搭建后端框架——听起来高大上的国际化](https://juejin.im/post/5ecc7492f265da76fe6cc832)
+* [（九）从零搭建后端框架——MyBatis使用和不足思考](https://juejin.im/post/5ed4a5046fb9a047e84f61b3)
 
 ## 源码
 [https://github.com/zhuqianchang/framework](https://github.com/zhuqianchang/framework)

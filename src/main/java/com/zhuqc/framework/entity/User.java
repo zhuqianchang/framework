@@ -1,5 +1,6 @@
 package com.zhuqc.framework.entity;
 
+import com.zhuqc.framework.common.Common;
 import com.zhuqc.framework.validator.Phone;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,9 +15,8 @@ import javax.validation.constraints.Size;
  */
 @Getter
 @Setter
-public class User {
+public class User extends Common {
 
-    @NotNull(message = "用户id不能为空")
     private Long id;
 
     @NotNull(message = "用户账号不能为空")
@@ -27,11 +27,12 @@ public class User {
     @Size(min = 6, max = 11, message = "密码长度必须是6-16个字符")
     private String password;
 
-    @NotNull(message = "用户邮箱不能为空")
+    @Size(max = 40, message = "用户昵称不能超过40个字符")
+    private String nickname;
+
     @Email(message = "邮箱格式不正确")
     private String email;
 
-    @NotNull(message = "用户手机号不能为空")
     @Phone(message = "手机号格式不正确")
     private String phone;
 }

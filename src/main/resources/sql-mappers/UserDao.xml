@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhuqc.framework.dao.UserDao">
+
+    <select id="getUser" resultType="com.zhuqc.framework.entity.User">
+        select * from sys_user where id = #{id, jdbcType = NUMERIC}
+    </select>
+
+    <insert id="addUser" parameterType="com.zhuqc.framework.entity.User">
+        insert into sys_user
+          (account,
+           password,
+           nickname,
+           email,
+           phone,
+           create_user,
+           create_time,
+           modify_user,
+           modify_time)
+        values
+          (#{account, jdbcType = VARCHAR},
+           #{password, jdbcType = VARCHAR},
+           #{nickname, jdbcType = VARCHAR},
+           #{email, jdbcType = VARCHAR},
+           #{phone, jdbcType = VARCHAR},
+           #{createUser, jdbcType = VARCHAR},
+           #{createTime, jdbcType = TIMESTAMP},
+           #{modifyUser, jdbcType = VARCHAR},
+           #{modifyTime, jdbcType = TIMESTAMP})
+    </insert>
+
+    <delete id="deleteUser">
+        delete from sys_user
+         where id = #{id, jdbcType = NUMERIC}
+    </delete>
+
+    <update id="updateUser" parameterType="com.zhuqc.framework.entity.User">
+        update sys_user
+           set nickname       = #{nickname, jdbcType = VARCHAR},
+               email          = #{email, jdbcType = VARCHAR},
+               phone          = #{phone, jdbcType = VARCHAR},
+               modify_user    = #{modifyUser, jdbcType = VARCHAR},
+               modify_time    = #{modifyTime, jdbcType = TIMESTAMP}
+         where id = #{id, jdbcType = NUMERIC}
+    </update>
+
+</mapper>

@@ -26,7 +26,7 @@ public abstract class Common implements Serializable {
     /**
      * 创建时间
      */
-    private Date createDateTime;
+    private Date createTime;
 
     /**
      * 修改人
@@ -36,5 +36,5 @@ public abstract class Common implements Serializable {
     /**
      * 修改时间
      */
-    private Date modifyDateTime;
+    private Date modifyTime;
 }

@@ -26,7 +26,7 @@ public class ApiResultAdvice implements ResponseBodyAdvice<ApiResult> {
 
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
-        return true;
+        return returnType.getParameterType().isAssignableFrom(ApiResult.class);
     }
 
     @Override
