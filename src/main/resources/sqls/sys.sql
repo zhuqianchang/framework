@@ -7,8 +7,8 @@ CREATE TABLE `sys_user` (
 	`email` VARCHAR (40) DEFAULT NULL COMMENT '邮箱',
 	`phone` VARCHAR (11) DEFAULT NULL COMMENT '电话',
 	`create_time` datetime DEFAULT NULL COMMENT '创建时间',
-	`create_user` INT (11) DEFAULT NULL COMMENT '创建人',
+	`create_user` VARCHAR (11) DEFAULT NULL COMMENT '创建人',
 	`modify_time` datetime DEFAULT NULL COMMENT '修改时间',
-	`modify_user` INT (11) DEFAULT NULL COMMENT '修改人',
+	`modify_user` VARCHAR (11) DEFAULT NULL COMMENT '修改人',
 	PRIMARY KEY (`id`)
 ) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4;

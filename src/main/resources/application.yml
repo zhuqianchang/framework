@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.190.233.26:3306/framework?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: 123456
+    url: jdbc:mysql://xxxxxxxx:3306/framework?useUnicode=true&characterEncoding=utf-8
+    username: xxxxxxxx
+    password: xxxxxxxx
 mybatis:
   mapper-locations: classpath:sql-mappers/*.xml
   configuration:
