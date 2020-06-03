@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;MODE=MYSQL;
+    schema: classpath:sqls/sys.sql
+  main:
+    banner-mode: off
+mybatis:
+  mapper-locations: classpath*:sql-mappers/**/*.xml

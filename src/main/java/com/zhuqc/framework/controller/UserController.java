@@ -24,7 +24,7 @@ public class UserController extends BaseController {
         return ApiResult.success(userService.getUser(id));
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public ApiResult addUser(@RequestBody @Valid User user) {
         setCreateInfo(user);
         return ApiResult.success(userService.addUser(user));
@@ -35,7 +35,7 @@ public class UserController extends BaseController {
         return ApiResult.success(userService.deleteUser(id));
     }
 
-    @PutMapping("/{id}")
+    @PutMapping
     public ApiResult updateUser(@RequestBody @Valid User user) {
         setModifyInfo(user);
         return ApiResult.success(userService.updateUser(user));
