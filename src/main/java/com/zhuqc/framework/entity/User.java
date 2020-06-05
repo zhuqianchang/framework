@@ -1,5 +1,8 @@
 package com.zhuqc.framework.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.zhuqc.framework.common.Common;
 import com.zhuqc.framework.validator.Phone;
 import lombok.Getter;
@@ -13,10 +16,12 @@ import javax.validation.constraints.Size;
  * @author Zhu.Qianchang
  * @date 2020-05-21
  */
+@TableName("sys_user")
 @Getter
 @Setter
 public class User extends Common {
 
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     @NotNull(message = "用户账号不能为空")

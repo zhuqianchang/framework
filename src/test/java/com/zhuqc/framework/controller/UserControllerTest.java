@@ -106,8 +106,7 @@ public class UserControllerTest {
                 .content(gson.toJson(user)))
                 // 结果验证
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("code").value(200))
-                .andExpect(jsonPath("data").value(1));
+                .andExpect(jsonPath("code").value(200));
     }
 
     @Test
@@ -119,8 +118,7 @@ public class UserControllerTest {
         mvc.perform(delete("/user/1")
                 .accept(MediaType.APPLICATION_JSON_UTF8))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("code").value(200))
-                .andExpect(jsonPath("data").value(1));
+                .andExpect(jsonPath("code").value(200));
     }
 
     @Test
@@ -142,7 +140,6 @@ public class UserControllerTest {
                 .accept(MediaType.APPLICATION_JSON_UTF8)
                 .content(gson.toJson(user)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("code").value(200))
-                .andExpect(jsonPath("data").value(1));
+                .andExpect(jsonPath("code").value(200));
     }
 }

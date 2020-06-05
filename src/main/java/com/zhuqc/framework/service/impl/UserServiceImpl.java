@@ -1,9 +1,11 @@
 package com.zhuqc.framework.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhuqc.framework.dao.UserDao;
 import com.zhuqc.framework.entity.User;
 import com.zhuqc.framework.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,28 +15,5 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional
-public class UserServiceImpl implements UserService {
-
-    @Autowired
-    private UserDao userDao;
-
-    @Override
-    public User getUser(Long id) {
-        return userDao.getUser(id);
-    }
-
-    @Override
-    public int addUser(User user) {
-        return userDao.addUser(user);
-    }
-
-    @Override
-    public int deleteUser(Long id) {
-        return userDao.deleteUser(id);
-    }
-
-    @Override
-    public int updateUser(User user) {
-        return userDao.updateUser(user);
-    }
+public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserService {
 }

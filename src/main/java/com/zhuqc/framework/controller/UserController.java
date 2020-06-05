@@ -21,23 +21,23 @@ public class UserController extends BaseController {
 
     @GetMapping("/{id}")
     public ApiResult getUser(@PathVariable("id") Long id) {
-        return ApiResult.success(userService.getUser(id));
+        return ApiResult.success(userService.getById(id));
     }
 
     @PostMapping
     public ApiResult addUser(@RequestBody @Valid User user) {
         setCreateInfo(user);
-        return ApiResult.success(userService.addUser(user));
+        return ApiResult.success(userService.save(user));
     }
 
     @DeleteMapping("/{id}")
     public ApiResult deleteUser(@PathVariable("id") Long id) {
-        return ApiResult.success(userService.deleteUser(id));
+        return ApiResult.success(userService.removeById(id));
     }
 
     @PutMapping
     public ApiResult updateUser(@RequestBody @Valid User user) {
         setModifyInfo(user);
-        return ApiResult.success(userService.updateUser(user));
+        return ApiResult.success(userService.updateById(user));
     }
 }

@@ -11,6 +11,7 @@
 * [（八）从零搭建后端框架——听起来高大上的国际化](https://juejin.im/post/5ecc7492f265da76fe6cc832)
 * [（九）从零搭建后端框架——MyBatis使用和不足思考](https://juejin.im/post/5ed4a5046fb9a047e84f61b3)
 * [（十）从零搭建后端框架——MockMvc单元测试](https://juejin.im/post/5ed75787e51d45786672bb06)
+* [（十一）从零搭建后端框架——如此简洁的数据库操作](https://juejin.im/post/5ed9968e51882542f9389941)
 
 ## 源码
 [https://github.com/zhuqianchang/framework](https://github.com/zhuqianchang/framework)
