@@ -1,6 +1,10 @@
 package com.zhuqc.framework.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhuqc.framework.common.ApiResult;
+import com.zhuqc.framework.common.QueryResult;
 import com.zhuqc.framework.entity.User;
 import com.zhuqc.framework.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +43,31 @@ public class UserController extends BaseController {
     public ApiResult updateUser(@RequestBody @Valid User user) {
         setModifyInfo(user);
         return ApiResult.success(userService.updateById(user));
+    }
+
+    @GetMapping("/page")
+    public ApiResult selectUserPage(@RequestParam String nickname,
+                                    @RequestParam long pageNum,
+                                    @RequestParam long pageSize) {
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.like("nickname", nickname);
+
+        Page<User> page = new Page<>(pageNum, pageSize);
+
+        IPage<User> userPage = userService.page(page, wrapper);
+        return ApiResult.success(new QueryResult<>(userPage));
+    }
+
+    @GetMapping("/page2")
+    public ApiResult selectUserPage2(@RequestParam String nickname,
+                                     @RequestParam long pageNum,
+                                     @RequestParam long pageSize) {
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.like("nickname", nickname);
+
+        Page<User> page = new Page<>(pageNum, pageSize);
+
+        IPage<User> userPage = userService.selectUserPage(page, wrapper);
+        return ApiResult.success(new QueryResult<>(userPage));
     }
 }

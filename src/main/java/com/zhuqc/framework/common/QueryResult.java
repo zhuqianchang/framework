@@ -1,5 +1,6 @@
 package com.zhuqc.framework.common;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,4 +29,9 @@ public class QueryResult<T> {
      * 返回结果集
      */
     private List<T> items;
+
+    public QueryResult(IPage<T> page) {
+        this.total = page.getTotal();
+        this.items = page.getRecords();
+    }
 }
