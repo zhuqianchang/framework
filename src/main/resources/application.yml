@@ -1,9 +1,35 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://xxxxxxxx:3306/framework?useUnicode=true&characterEncoding=utf-8
     username: xxxxxxxx
     password: xxxxxxxx
+    druid:
+      stat-view-servlet:
+        # 开启Druid监控页面
+        enabled: true
+        # 访问路径
+        url-pattern: /druid/*
+        # 白名单
+        allow: 127.0.0.1
+        # 黑名单
+        deny:
+        # 设置账号密码
+        login-username: root
+        login-password: 123456
+        # 重置按钮
+        reset-enable: true
+      web-stat-filter:
+        # 开启Web应用 URI监控
+        enabled: true
+        # 拦截路径
+        url-pattern: /*
+        # 开启Session监控
+        session-stat-enable: true
+      # 开启SQL监控 SQL防火墙
+      filters: stat,wall
+      # 开启Spring监控
+      aop-patterns: com.zhuqc.framework.*
 mybatis:
   mapper-locations: classpath:sql-mappers/*.xml
   configuration:

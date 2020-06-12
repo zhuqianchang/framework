@@ -13,6 +13,7 @@
 * [（十）从零搭建后端框架——MockMvc单元测试](https://juejin.im/post/5ed75787e51d45786672bb06)
 * [（十一）从零搭建后端框架——如此简洁的数据库操作](https://juejin.im/post/5ed9968e51882542f9389941)
 * [（十二）从零搭建后端框架——如此简洁的分页查询](https://juejin.im/post/5edf309c6fb9a047f558d0a0)
+* [（十三）从零搭建后端框架——全方位的监控Druid](https://juejin.im/post/5ee2db7a6fb9a047d8184e6c)
 
 ## 源码
 [https://github.com/zhuqianchang/framework](https://github.com/zhuqianchang/framework)

@@ -19,6 +19,7 @@
         <swagger2.version>2.9.2</swagger2.version>
         <mybatis.version>2.1.1</mybatis.version>
         <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <druid.version>1.1.14</druid.version>
     </properties>
 
     <dependencies>
@@ -46,10 +47,11 @@
             <version>${mybatis-plus.version}</version>
         </dependency>
 
+        <!-- druid -->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>${mybatis-plus.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
         </dependency>
 
         <!-- mysql -->
