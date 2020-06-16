@@ -30,6 +30,27 @@ spring:
       filters: stat,wall
       # 开启Spring监控
       aop-patterns: com.zhuqc.framework.*
+  flyway:
+    # 开启flyway
+    enabled: true
+    # 数据库非空时，是否执行基线
+    baseline-on-migrate: false
+    # 执行基线版本号
+    baseline-version: 1
+    # 校验SQL文件是否存在
+    check-location: true
+    # SQL文件位置
+    locations: classpath:db/migration
+    # SQL文件前缀
+    sql-migration-prefix: V
+    # SQL文件分隔符
+    sql-migration-separator: __
+    # SQL文件后缀
+    sql-migration-suffixes: .sql
+    # 记录表名称
+    table: flyway_schema_history
+    # 目标版本
+    target:
 mybatis:
   mapper-locations: classpath:sql-mappers/*.xml
   configuration:
